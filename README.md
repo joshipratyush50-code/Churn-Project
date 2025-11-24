@@ -24,15 +24,12 @@ Telecom companies face high acquisition costs and competitive pressure. Retainin
 - Documentation (Word, Markdown)
 
 ## Repository Structure
-├── churn_sql.py # Python + SQL pipeline for preprocessing
-├── churn.db # SQLite database with cleaned and modeled data
-├── dataset.csv # Raw dataset with 7,043 customer records
-├── Churn Dashboard.twb # Tableau dashboard
-├── Executive Summary.docx # Business insights and summary
-└── README.md # Project documentation
-
-markdown
-Copy code
+- churn_sql.py: Python + SQL pipeline for preprocessing
+- churn.db: SQLite database with cleaned and modeled data
+- dataset.csv: Raw dataset with 7,043 customer records
+- Churn Dashboard.twb: Tableau dashboard
+- Executive Summary.docx: Business insights and summary
+- README.md: Project documentation
 
 ## Dashboard Features
 - KPI cards for total customers, churn rate, and average revenue per user
@@ -46,9 +43,6 @@ Copy code
 
 ### Step 1: Run SQL/Python preprocessing
 python churn_sql.py
-
-markdown
-Copy code
 
 ### Step 2: Explore the database  
 Open `churn.db` using DB Browser for SQLite, VS Code SQL extensions, or Python.
