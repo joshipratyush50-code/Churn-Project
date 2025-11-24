@@ -1,27 +1,51 @@
 # Customer Churn Analysis – Telecom Dataset
 
-## Overview
-This project analyzes 7,043 telecom customer records to identify patterns driving customer churn. Using Python, SQL, and Tableau, the project delivers a structured end-to-end workflow: data cleaning, SQL modeling, database creation, interactive dashboard development, and business insights.
+## Executive Summary
+This project analyzes 7,043 telecom customer records to uncover the key factors driving customer churn. Using Python, SQL, SQLite, and Tableau, it delivers a complete end-to-end workflow: data cleaning, SQL modeling, analytical database creation, and an interactive Tableau dashboard. The analysis identifies high-risk customer segments and outlines data-driven retention strategies with measurable financial impact.
 
-The goal is to understand why customers leave and provide data-driven recommendations to reduce churn and protect recurring revenue.
-
-
-
+## Dashboard Preview
 ![Dashboard Preview](dashboard_preview.png)
 
+## Business Problem
+Telecom companies face high acquisition costs and rising competition. Customer churn directly reduces Monthly Recurring Revenue (MRR), making retention a top priority.  
+This project addresses three core questions:
 
+1. Who is churning?
+2. Why are they churning?
+3. Which actions will reduce churn most effectively?
 
+The analysis identifies customer behaviors, contract types, and payment methods most associated with attrition and quantifies the revenue at risk.
 
 ## Key Insights
-(Insights from Executive Summary: Executive Summary.docx)
+(From Executive Summary)
 
-- Month-to-month contracts show a 43% churn rate, compared to 11% for two-year contracts. Long-term commitments significantly reduce attrition.
-- Customers using electronic checks exhibit a 48% churn rate, far higher than auto-pay customers (~16%).
-- Churned customers pay about 25% higher monthly charges on average, indicating strong price sensitivity.
-- Reducing churn among high-value month-to-month customers by 10% can preserve approximately $1.2 million in annual revenue.
+- Month-to-month customers churn at **43%**, while two-year contract customers churn at **11%**.
+- Customers using electronic checks churn at **48%**, versus ~16% for auto-pay customers.
+- Churned customers pay **≈25% higher monthly charges**, indicating strong price sensitivity.
+- A 10% reduction in churn among valuable month-to-month customers could preserve **~$1.2M in annual revenue**.
 
-## Business Problem
-Telecom companies face high acquisition costs and competitive pressure. Retaining existing customers is more cost-effective than acquiring new ones. This project identifies the financial and behavioral factors behind customer attrition and provides evidence-based strategies to reduce churn.
+## Methodology
+
+### 1. Data Preparation (Python)
+- Cleaned missing and inconsistent values  
+- Standardized categorical fields  
+- Engineered tenure and churn indicators  
+- Exported cleaned dataset to SQL and Tableau  
+
+### 2. Database Modeling (SQLite)
+- Built structured analytical database (`churn.db`)  
+- Created tables for contract type, payment method, tenure, charges, and churn status  
+- Performed SQL feature analysis  
+
+### 3. Visualization (Tableau)
+- Developed interactive dashboard with KPIs  
+- Implemented filters for contract, payment method, internet service, gender, and tenure  
+- Visualized churn by contract type, payment method, and monthly charges  
+
+### 4. Reporting
+- Compiled business implications and recommended actions  
+- Quantified financial retention impact  
+- Created executive-style summary (Executive Summary.docx)
 
 ## Tech Stack
 - Python (pandas, numpy)
@@ -38,39 +62,47 @@ Telecom companies face high acquisition costs and competitive pressure. Retainin
 - Executive Summary.docx: Business insights and summary
 - README.md: Project documentation
 
+
 ## Dashboard Features
-- KPI cards for total customers, churn rate, and average revenue per user
-- Churn segmented by contract type and payment method
-- Monthly charge distribution
-- Tenure-based filtering and segmentation
-- Internet service type and demographic breakdown
-- Fully interactive filters for dynamic exploration
+- KPI cards for churn rate, total customers, and ARPU  
+- Churn segmentation by contract type  
+- Payment method analysis  
+- Monthly charges comparison  
+- Tenure-based filtering  
+- Internet service and demographic segmentation  
+- Fully interactive Tableau filters  
 
 ## How to Run the Project
 
-### Step 1: Run SQL/Python preprocessing
+### Step 1 — Generate the database
 python churn_sql.py
 
-### Step 2: Explore the database  
-Open `churn.db` using DB Browser for SQLite, VS Code SQL extensions, or Python.
 
-### Step 3: Open the Tableau dashboard
-1. Open “Churn Dashboard.twb” in Tableau Desktop.
-2. Connect it to `dataset.csv` or `churn.db`.
-3. Use filters to explore churn patterns.
+### Step 2 — Explore the database
+Open `churn.db` using:
+- DB Browser for SQLite  
+- VS Code SQL extensions  
+- Python scripts  
 
-## Role and Contributions
-- Cleaned and prepared the dataset
-- Designed SQL transformations and database structure
-- Built the Tableau dashboard
-- Conducted churn analysis and developed insights
-- Authored the executive summary and documentation
+### Step 3 — Launch the Tableau dashboard
+1. Open `Churn Dashboard.twb` in Tableau Desktop  
+2. Connect to `dataset.csv` or `churn.db`  
+3. Use filters and KPIs to explore churn drivers  
 
-## Future Improvements
-- Machine learning churn prediction (Logistic Regression, Random Forest)
-- Customer segmentation using clustering
-- Automated Python reporting
-- Real-time churn scoring through API integration
+## Skills Demonstrated
+- Data Cleaning & Preprocessing  
+- SQL Querying & Database Design  
+- Exploratory Data Analysis (EDA)  
+- Dashboard Design & Visualization (Tableau)  
+- Business Intelligence Storytelling  
+- Churn & Customer Analytics  
+- KPI Development  
 
-## Purpose
-This project demonstrates the ability to turn raw data into actionable business insights using analytics, visualization, and statistical reasoning. It reflects core skills required in business analytics and data-driven decision-making.
+## Future Enhancements
+- Predictive churn model (Logistic Regression, Random Forest)  
+- Customer clustering (K-Means, Hierarchical)  
+- Automated retention reporting  
+- Real-time churn scoring with API pipelines  
+
+## Project Purpose
+This project demonstrates the ability to convert raw customer data into actionable insights that drive business decisions. It reflects practical skills in analytics, visualization, SQL modeling, and data-driven retention strategy—key capabilities for business analytics and data science roles.
