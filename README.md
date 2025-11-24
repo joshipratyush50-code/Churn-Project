@@ -5,6 +5,13 @@ This project analyzes 7,043 telecom customer records to identify patterns drivin
 
 The goal is to understand why customers leave and provide data-driven recommendations to reduce churn and protect recurring revenue.
 
+
+
+![Dashboard Preview](dashboard_preview.png)
+
+
+
+
 ## Key Insights
 (Insights from Executive Summary: Executive Summary.docx)
 
